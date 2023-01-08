@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BliBli Demo</title>
+    <link rel="shortcut icon" href="https://app-cdn.moengage.com/images/brand/MoEngage_favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        (function(i, s, o, g, r, a, m, n) {
+            i.moengage_object = r;
+            t = {};
+            q = function(f) {
+                return function() {
+                    (i.moengage_q = i.moengage_q || []).push({
+                        f: f,
+                        a: arguments
+                    })
+                }
+            };
+            f = ['track_event', 'add_user_attribute', 'add_first_name', 'add_last_name', 'add_email', 'add_mobile', 'add_user_name', 'add_gender', 'add_birthday', 'destroy_session', 'add_unique_user_id', 'moe_events', 'call_web_push', 'track', 'location_type_attribute'], h = {
+                onsite: ["getData", "registerCallback"]
+            };
+            for (k in f) {
+                t[f[k]] = q(f[k])
+            }
+            for (k in h)
+                for (l in h[k]) {
+                    null == t[k] && (t[k] = {}), t[k][h[k][l]] = q(k + "." + h[k][l])
+                }
+            a = s.createElement(o);
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m);
+            i.moe = i.moe || function() {
+                n = arguments[0];
+                return t
+            };
+            a.onload = function() {
+                if (n) {
+                    i[r] = moe(n)
+                }
+            }
+        })(window, document, 'script', 'https://cdn.moengage.com/webpush/moe_webSdk.min.latest.js', 'Moengage')
+
+
+        Moengage = moe({
+            app_id: "DNBVW45PTD67QO7I1Q7ORLZD",
+            debug_logs: 0
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top:5px;
+            padding:5%;
+            width: 70%;
+            box-shadow: 0 0 16px -4px rgb(0 0 0 / 12%);
+            border-radius: 8px;
+        }
+        
+        .osm_section{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        
+        .osm{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px; 
+            box-shadow: 0 0 16px -4px rgb(0 0 0 / 12%);
+            width:200px;
+            height:200px;
+            margin: 20px;
+            
+        }
+        
+        .osm_thumb{
+            margin:4px;    
+        }
+        
+        .osm_name{
+            margin:4px;
+            margin-top:30px;
+            font-size: 1rem;
+            padding: 4px;
+            border-radius: 8px;
+            color: #fff;
+            background-color: #0095da;
+            border: none;
+            width:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 468px) {
+            #container {           
+                margin: 20%;
+                display: flex;
+                flex-direction: column;  
+            }
+            
+            .osm{
+                margin:20px;
+        }
+        .osm_section{
+            display:flex;
+            flex-direction: column;
+
+            
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+<div class="osm_section">
+<div id="spin" class="osm">
+    <img class="osm_thumb" src="https://i.picsum.photos/id/668/100/100.jpg?hmac=U-xfAudzwMukR7dC9OYRZ_O_FvVPX1kplCGD55cePUw">
+    <button class="osm_name">Spin the wheel</button>
+</div>
+        
+<div id="slot" class="osm">
+    <img class="osm_thumb" src="https://i.picsum.photos/id/668/100/100.jpg?hmac=U-xfAudzwMukR7dC9OYRZ_O_FvVPX1kplCGD55cePUw">
+    <button class="osm_name">Slot Machine</button>
+</div>
+        
+<div id="scratchwin" class="osm">
+    <img class="osm_thumb" src="https://i.picsum.photos/id/668/100/100.jpg?hmac=U-xfAudzwMukR7dC9OYRZ_O_FvVPX1kplCGD55cePUw">
+    <button class="osm_name">Scratch to win</button>
+</div>
+        </div>
+<div class="osm_section">
+<div id="timer" class="osm">
+    <img class="osm_thumb" src="https://i.picsum.photos/id/668/100/100.jpg?hmac=U-xfAudzwMukR7dC9OYRZ_O_FvVPX1kplCGD55cePUw">
+    <button class="osm_name">Countdown Timer</button>
+</div>
+        
+<div id="surveytypeform" class="osm">
+    <img class="osm_thumb" src="https://i.picsum.photos/id/668/100/100.jpg?hmac=U-xfAudzwMukR7dC9OYRZ_O_FvVPX1kplCGD55cePUw">
+    <button class="osm_name">Survey with Typeform</button>
+</div>
+
+<div id="surveyhtml" class="osm">
+    <img class="osm_thumb" src="https://i.picsum.photos/id/668/100/100.jpg?hmac=U-xfAudzwMukR7dC9OYRZ_O_FvVPX1kplCGD55cePUw">
+    <button class="osm_name">Survey with HTML</button>
+</div>
+    </div>
+
+    </div>
+
+    <script>
+const buttonGroup = document.getElementById("container");
+        
+
+
+const buttonGroupPressed = (e) => {
+    
+    var eventname =e.target.parentElement.getAttribute('id');
+    console.log(eventname);
+    Moengage.track_event(eventname);
+    
+    // Get any clicked element inside button-group wrapper div
+}
+
+buttonGroup.addEventListener('click', buttonGroupPressed);
+
+    </script>
+</body>
+
+</html>
